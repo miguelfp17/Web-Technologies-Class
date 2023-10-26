@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Criar Conta</title>
+</head>
+<body>
+    <h1>Formulário de Criar Conta</h1>
+        <!-- Campo de Nome -->
+        <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Escreva o seu nome" required minlength="3">
+
+        <br>
+
+        <!-- Campo de Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Escreva o seu email" required>
+
+        <br>
+
+        <!-- Campo de Idade -->
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" placeholder="Informe a sua idade" required>
+
+        <br>
+
+        <!-- Campo de Data de Nascimento -->
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento">
+
+        <br>
+
+        <!-- Campo de Nacionalidade (dropdown) -->
+        <label for="nacionalidade">Nacionalidade:</label>
+        <select id="nacionalidade" name="nacionalidade" required>
+            <option value="brasil">Brasil</option>
+            <option value="portugal">Portugal</option>
+            <option value="eua">Estados Unidos</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <br>
+
+        <!-- Campo de Palavra-passe -->
+        <label for="senha">Palavra-passe:</label>
+        <input type="password" id="senha" name="senha" placeholder="Escolha uma palavra-passe" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="A senha deve conter pelo menos 8 caracteres, uma letra maiúscula e uma letra minúscula">
+
+        <br>
+
+        <!-- Botão de submissão do formulário -->
+        <input type="submit" value="Submeter formulário">
+    </form>
+</body>
+</html>
