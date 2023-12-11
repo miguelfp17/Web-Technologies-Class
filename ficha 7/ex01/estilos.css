@@ -1,0 +1,14 @@
+body{
+    background-color: #000000;
+}
+.image-container{
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.image{
+    width: 300px;
+}

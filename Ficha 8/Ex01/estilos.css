@@ -1,0 +1,19 @@
+body{
+    background-color: #FFFFFF;
+}
+.seccao{
+    padding: 80px;
+}
+.main_grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 60px;
+}
+@media only screen and (max-width: 768px) {
+    .main_grid{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+  }
