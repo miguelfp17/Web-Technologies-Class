@@ -1,86 +1,92 @@
 //Ex1
-const botao = document.getElementById("botao");
-botao.addEventListener("click",Clicar);
-function Clicar(){
-    alert("“A button has been clicked!")
+const ex1 = document.getElementById("ex1");
+ex1.addEventListener("click",evenOrOdd);
+function evenOrOdd(){
+    num = prompt("Insira um Número");
+    if(num%2==0){
+        alert("True")
+    }
+    else{
+        alert("False")
+    }
 }
 //--------------------------------------------------
 //Ex2
-setTimeout(function() {
-    console.log("5 seconds passed by!");
-  }, 5000);
+const ex2 = document.getElementById("ex2");
+ex2.addEventListener("click",concatenate);
+function concatenate(){
+    palavra1 = prompt("Insira uma Palavra");
+    palavra2 = prompt("Insira uma Palavra");
+    palavra_concatenada = palavra1 + palavra2;
+    alert(palavra_concatenada);
+}
 //--------------------------------------------------
 //Ex3
-function Hora(){
-    const data= new Date();
-    const horas = data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
-    console.log(horas);
+const ex3 = document.getElementById("ex3");
+ex3.addEventListener("click",concatenate);
+function concatenate(){
+    num = prompt("Insira um Número");
+    let soma=0;
+    for(let i=0;i<=num;i++){
+        soma+=i;
+    }
+    alert(soma);
 }
-setInterval(Hora,2000);
 //--------------------------------------------------
 //Ex4
-function Data(){
-    const data= new Date();
-    const mes = parseInt(data.getUTCMonth()) + 1
-    const dataAtual = data.getUTCDate() + ":" + mes + ":" + data.getFullYear();
-    console.log(dataAtual);
+const ex4 = document.getElementById("ex4");
+ex4.addEventListener("click",random_game);
+function random_game(){
+    let num = 0;
+    num_rand = parseInt(Math.random() * (10-1) + 1);
+    console.log(num_rand);
+        while (num!=num_rand){
+            num = prompt("Insira um número");
+            if(num>num_rand){
+                alert("LOWER");
+            }
+            if(num<num_rand){
+                alert("HIGHER");
+            }
+        }
+        alert("Correct");
+    
 }
-setInterval(Data,2000);
 //--------------------------------------------------
 //Ex5
-const largura = document.getElementById("largura");
-largura.addEventListener("click",Largura);
-function Largura(){
-    const larguraTela  = window.screen.width;
-    console.log(larguraTela);
+const ex5 = document.getElementById("ex5");
+ex5.addEventListener("click",convertCelsiusToFahrenheit);
+function convertCelsiusToFahrenheit(){
+    tempCelsius = prompt("Insira um número");
+    let tempFahrenheit=(tempCelsius * 9/5) + 32;
+    alert("Temperatura: " + tempFahrenheit);
+            
 }
 //--------------------------------------------------
 //Ex6
-const altura = document.getElementById("altura");
-altura.addEventListener("click",Altura);
-function Altura(){
-    const alturaTela  = window.screen.height;
-    console.log(alturaTela);
+const ex6 = document.getElementById("ex6");
+ex6.addEventListener("click",clicks);
+let cliques=0
+function clicks(){
+    cliques+=1;
+    console.log("Cliques= " + cliques);
+    
+            
 }
 //--------------------------------------------------
 //Ex7
-function readUserInput() {
-    let numero1 = prompt("Insira o Primeiro Número");
-    let operacao, numero2;
-
-    if (!isNaN(numero1)) {
-        operacao = prompt("+, -, * ou /");
-
-        if (operacao == "+" || operacao == "-" || operacao == "*" || operacao == "/") {
-            numero2 = prompt("Insira o Segundo Número");
-
-            if (isNaN(numero2)) {
-                alert("Número Inválido");
-            }
-        } else {
-            alert("Operador Inválido");
-        }
-    } else {
-        alert("Número Inválido");
-    }
-
-    return { numero1, numero2, operacao };
+const ex7 = document.getElementById("ex7");
+ex7.addEventListener("click",horas);
+function horas(){
+    data = new Date();
+    const horas = data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
+    console.log(horas);
+    setTimeout(function() {
+        console.clear();
+      }, 1500); 
 }
-
-function realizarOperacoes(operacao, numero1, numero2) {
-    let resultado = eval(numero1 + operacao + numero2);
-    let resultadoFinal = parseFloat(resultado.toFixed(2));
-    alert(resultadoFinal);
-    return resultadoFinal;
-}
-
-function main() {
-    let userInput = readUserInput();
-    realizarOperacoes(userInput.operacao, userInput.numero1, userInput.numero2);
-}
-
-main();
-
+setInterval(horas,1000);
+//--------------------------------------------------
 
 
 
